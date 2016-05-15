@@ -1,0 +1,101 @@
+FORMAT: 1A
+HOST: http://apiblueprint.org/
+
+# majesticthai
+
+Majestic Thai
+
+## Majestic Thai collection [/Menu]
+
+### Menu [GET]
+
++ Response 200 (application/json)
+
+                [
+                    {
+                    "item": "Edamame",
+                    "description": "Steamed",
+                    "price": 4,
+                    "category": "appetizer",
+                    "id": 1
+                  },
+                
+                  {
+                    "item": "Spring Rolls",
+                    "description": "Spring rolls with vegetables",
+                    "price": 5,
+                    "category": "appetizer",
+                    "id": 2
+                  },
+                
+                  {
+                    "item": "Shrimp",
+                    "description": "Jumbo fried shrimp with sweet and sour sauce",
+                    "price": 5,
+                    "category": "appetizer",
+                    "id": 3
+                  },
+                
+                  {
+                    "item": "Orange Chicken",
+                    "description": "Orange Chicken with noodles or rice",
+                    "price": 12,
+                    "category": "entree",
+                    "id": 4
+                  },
+                
+                  {
+                    "item": "Teriyaki",
+                    "description": "Teriyaki chicken or beef with noodles or rice",
+                    "price": 15,
+                    "category": "entree",
+                    "id":5
+                  },
+                
+                  {
+                    "item": "Sesame Chicken",
+                    "description": "Sesame chicken with noodles or rice",
+                    "price": 12,
+                    "category": "entree",
+                    "id":6
+                  },
+                
+                  {
+                    "item": "Banana Cream Pie",
+                    "description": "",
+                    "price": 8,
+                    "category": "dessert",
+                    "id": 7
+                  },
+                
+                  {
+                    "item": "Chocolate Ice Cream ",
+                    "description": "",
+                    "price": 8,
+                    "category": "dessert",
+                    "id":8
+                  }
+                ]
+            }
+        ]
+## Majestic Thai collection [/menu/dishes/{id}]
+
+Parameters
+    + question_id (number)
+    
+### Order [POST]
+
+What was ordered.
+
++ Request (application/json)
+
+        {
+            "item": "Sesame Chicken",
+            "price": 12
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
